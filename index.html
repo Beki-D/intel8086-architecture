@@ -91,10 +91,10 @@
         .heading {
             margin-bottom: 3rem;
             font-size: 3rem;
-            color: var(--black);
+            color: var(--white);
             text-transform: capitalize;
             padding-left: 1rem;
-            border-left: 1rem solid var(--blue);
+            border-left: 1rem solid var(--white);
         }
 
         .hero {
@@ -109,34 +109,103 @@
         }
         .hero .hero-text {
             width: 50rem;
-            position: relative;
         }
         .hero h1 {
             font-size: 5rem;
             color: var(--white);
-            text-transform: capitalize;
             text-transform: uppercase;
+            position: relative;
+            z-index: 10;
         }
         .hero p {
             font-size: 1.5rem;
             color: var(--light-bg);
             line-height: 2;
             padding: 3rem 0;
+            position: relative;
+            z-index: 10;
         }
-/*
-        .hero::before {
+
+        .hero::after {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(90deg, var(--blue), transparent 60%);
-        } */
+            background: linear-gradient(90deg, var(--black), transparent 60%);
+        }
         /* .hero:hover {
             filter: brightness(0.75) contrast(1) sepia(0.7) hue-rotate(20deg) saturate(0.5);
             transition: all 1.5s ease-out;
         } */
+
+
+        .overview {
+            background: var(--blue);
+        }
+        .overview .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        .overview .row img {
+            width: 40rem;
+        }
+        .overview .row .content {
+            width: 60rem;
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+
+
+        .features {
+            background: var(--black);
+        }
+        .features .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+        }
+        .features .box-container .box {
+            text-align: center;
+            padding: 3rem;
+            background: var(--light-bg);
+            box-shadow: var(--box-shadow);
+            border: var(--border);
+        }
+        .features .box-container .box h3 {
+            font-size: 1.6rem;
+            color: var(--black);
+            text-transform: capitalize;
+            padding: 1rem 0;
+        }
+        .features .box-container .box p {
+            font-size: 1.5rem;
+            color: var(--light-color);
+            line-height: 2;
+        }
+
+
+        .architecture {
+            background: var(--blue);
+        }
+        .architecture .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        .architecture .row img {
+            width: 40rem;
+        }
+        .architecture .row .content {
+            width: 60rem;
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+
         </style>
 
 </head>
@@ -167,6 +236,81 @@
     <!-- overview section starts here -->
     <section class="overview" id="overview">
         <h1 class="heading">overview</h1>
+        
+        <div class="row">
+            <img src="./Assets/intel8086-1978-nobg.png" alt="">
+
+            <div class="content">
+                <h3>8086 Microprocessor is an enhanced version of 8085Microprocessor that was designed by Intel in 1976. </h3>
+                <p>It is a 16-bit Microprocessor having 20 address lines and16 data lines that provides up to 1MB storage. It consists of powerful instruction set, which provides operations like multiplication and division easily.</p>
+                <a href="#overview" class="btn">read more</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- features section starts here -->
+     <section class="features" id="features">
+        <h1 class="heading">features</h1>
+        
+        <div class="box-container">
+            <div class="box">
+                <h3>instruction queue</h3>
+                <p>capable of storing six instruction bytes from the memory resulting in faster processing</p>
+            </div>
+        
+            <div class="box">
+                <h3>first 16-bit processor</h3>
+                <p>having 16-bit ALU, 16-bit registers, internal data bus, and 16-bit external data bus resulting in faster processing</p>
+            </div>
+        
+            <div class="box">
+                <h3>available in 3 versions based on frequency</h3>
+                <p>
+                    8086 → 5MHz<br>
+                    8086-2 → 8MHz<br>
+                    (c)8086-1 → 10 MHz<br>
+                </p>
+            </div>
+        
+            <div class="box">
+                <h3>pipelining</h3>
+                <p> two stages of pipelining, i.e. Fetch Stage and Execute Stage, which improves performance</p>
+            </div>
+        
+            <div class="box">
+                <h3>Fetch stage</h3>
+                <p>can prefetch up to 6 bytes of instructions and stores them in the queue</p>
+            </div>
+        
+            <div class="box">
+                <h3>Execute stage</h3>
+                <p>executes these instructions</p>
+            </div>
+        
+            <div class="box">
+                <h3>transistors</h3>
+                <p>consists of 29,000 transistors</p>
+            </div>
+        
+            <div class="box">
+                <h3>interrupts</h3>
+                <p>has 256 vectored interrupts</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- architecture section starts here -->
+     <section class="architecture" id="architecture">
+        <h1 class="heading">architecture</h1>
+        
+        <div class="row">
+            <div class="content">
+                <h3>Intel 8086 Microprocessor architecture </h3>
+                <p>The following diagram shows the architecture of the 8086 Microprocessor</p>
+            </div>
+            
+            <img src="./Assets/intelarchitecture.jpg" alt="">
+        </div>
     </section>
 
 </body>
