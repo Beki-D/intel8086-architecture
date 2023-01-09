@@ -153,11 +153,14 @@
             flex-wrap: wrap;
             gap: 3rem;
         }
+        .overview .row .img {
+            flex: 0 0 35rem;
+        }
         .overview .row img {
-            width: 40rem;
+            width: 100%;
         }
         .overview .row .content {
-            width: 60rem;
+            flex: 0 0 35rem;
             font-size: 1.5rem;
             line-height: 2;
         }
@@ -241,7 +244,9 @@
         <h1 class="heading">overview</h1>
         
         <div class="row">
-            <img src="./Assets/intel8086-1978-nobg.png" alt="">
+            <div class="image">
+                <img src="./Assets/intel8086-1978-nobg.png" alt="">
+            </div>
 
             <div class="content">
                 <h3>8086 Microprocessor is an enhanced version of 8085Microprocessor that was designed by Intel in 1976. </h3>
