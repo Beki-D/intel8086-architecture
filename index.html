@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8086 Architecture</title>
+
+    <style>
+        :root {
+            --blue:#213f88;
+            --black:#111;
+            --white:#fff;
+            --grey:#6d7a89;
+            --light-blue:#376aea;
+            --light-bg:#eee;
+            --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+            --border:.1rem solid rgba(0,0,0,.3);
+        }
+    
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all 0.5s linear;
+        }
+        
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            cursor: pointer;
+            font-size: 1.7rem;
+            text-transform: capitalize;
+        }
+        .btn:hover {
+            background: var(--blue);
+            color: var(--black);
+        }
+        
+        section {
+            padding: 5rem 10%;
+        }
+        
+        header {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            max-height: 8rem;
+            background: linear-gradient(180deg, var(--black) 75%, var(--blue));
+        }
+
+        header .logo {
+            font-size: 2.5rem;
+            color: var(--white);
+            text-transform: capitalize;
+        }
+        header .logo span {
+            color: var(--blue);
+        }
+
+        header .navbar a {
+            font-size: 1.8rem;
+            color: var(--white);
+            text-transform: capitalize;
+            margin: 0 1rem;
+        }
+        header .navbar a:hover {
+            color: var(--light-blue);
+        }
+
+        .heading {
+            margin-bottom: 3rem;
+            font-size: 3rem;
+            color: var(--black);
+            text-transform: capitalize;
+            padding-left: 1rem;
+            border-left: 1rem solid var(--blue);
+        }
+
+        .hero {
+            padding: 0;
+            min-height: 70rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            opacity: 0.8;
+            background-image:  repeating-linear-gradient(45deg, var(--black) 25%, transparent 25%, transparent 75%, #444cf7 75%, var(--black)), repeating-linear-gradient(45deg, #444cf7 25%, var(--black) 25%, var(--black) 75%, #444cf7 75%, var(--black));
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+        .hero .hero-text {
+            width: 50rem;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 5rem;
+            color: var(--white);
+            text-transform: capitalize;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--light-bg);
+            line-height: 2;
+            padding: 3rem 0;
+        }
+/*
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, var(--blue), transparent 60%);
+        } */
+        /* .hero:hover {
+            filter: brightness(0.75) contrast(1) sepia(0.7) hue-rotate(20deg) saturate(0.5);
+            transition: all 1.5s ease-out;
+        } */
+        </style>
+
+</head>
+<body>
+    <!-- header section starts here -->
+    <header class="header">
+        <a href="#hero" class="logo">
+            <span>Intel</span> 8086
+        </a>
+        <nav class="navbar">
+            <a href="#overview">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#architecture">Architecture</a>
+        </nav>
+    </header>
+
+    <!-- hero section starts here -->
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <h1>Intel 8086</h1>
+            <p>One of the first notable microprocessors.</p>
+        </div>
+        <div class="hero-image">
+            <img src="./Assets/Intel_C8086-bgremoved.png" alt="Intel_C8086" id="c8086img">
+        </div>
+    </section>
+
+</body>
+</html>
